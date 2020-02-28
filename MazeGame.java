@@ -3,10 +3,10 @@ public class MazeGame
 {
     static Maze createGame()
     {
-        Maze amaze=new Maze();
-        Room r1=new Room(1);
-        Room r2=new Room(2);
-        Door thedoor=new Door(r1,r2);
+        Maze amaze=MazeFactory.makeMaze();
+        Room r1=MazeFactory.makeRoom(1);
+        Room r2=MazeFactory.makeRoom(2);
+        Door thedoor=MazeFactory.makeDoor(r1,r2);
         amaze.addRoom(r1);
         amaze.addRoom(r2);
         r1.setSide(Direction.North,new Wall());
@@ -26,8 +26,6 @@ public class MazeGame
         {
             System.out.println("rooms no"+room.getRoomNo());
             
-
-
         }
 
     }
