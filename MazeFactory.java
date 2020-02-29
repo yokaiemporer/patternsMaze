@@ -4,9 +4,13 @@ class MazeFactory
     {
 
     }
-    static Maze makeMaze()
+    static SimplerMaze makeSimple()
     {
-        return new Maze();
+        return new SimplerMaze();
+    }
+    static ComplexMaze makeComplex()
+    {
+        return new ComplexMaze();
     }
     static Wall makeWall()
     {
