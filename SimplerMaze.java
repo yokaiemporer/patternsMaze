@@ -14,14 +14,14 @@ class SimplerMaze implements MazeBuilder
         Door thedoor=MazeFactory.makeDoor(r1,r2);
         addRoom(r1);
         addRoom(r2);
-        r1.setSide(Direction.North,new Wall());
+        r1.setSide(Direction.North,MazeFactorySingleton.makeWall());
         r1.setSide(Direction.East,thedoor);
-        r1.setSide(Direction.South,new Wall());
-        r1.setSide(Direction.West,new Wall());
+        r1.setSide(Direction.South,MazeFactorySingleton.makeWall());
+        r1.setSide(Direction.West,MazeFactorySingleton.makeWall());
 
-        r2.setSide(Direction.North,new Wall());
-        r2.setSide(Direction.East,new Wall());
-        r2.setSide(Direction.South,new Wall());
+        r2.setSide(Direction.North,MazeFactorySingleton.makeWall());
+        r2.setSide(Direction.East,MazeFactorySingleton.makeWall());
+        r2.setSide(Direction.South,MazeFactorySingleton.makeWall());
         r2.setSide(Direction.West,thedoor);
         
     }

@@ -1,6 +1,6 @@
 class MazeFactory
 {
-    public MazeFactory()
+    private MazeFactory()
     {
 
     }

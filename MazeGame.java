@@ -9,8 +9,11 @@ public class MazeGame
 
     }
     public static void main(String[] args) {
-        SimplerMaze smp=MazeFactory.makeSimple();
-        ComplexMaze cmp=MazeFactory.makeComplex();
+        // SimplerMaze smp=MazeFactory.makeSimple();
+        // ComplexMaze cmp=MazeFactory.makeComplex();
+        SimplerMaze smp=MazeFactorySingleton.makeSimple();
+        ComplexMaze cmp=MazeFactorySingleton.makeComplex();
+
         MazeBuilder mez=createGame(smp);
 
         for(Room room : mez.getRooms())
