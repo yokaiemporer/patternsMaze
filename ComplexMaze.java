@@ -12,7 +12,12 @@ class ComplexMaze implements MazeBuilder
         
         Room r1=MazeFactory.makeRoom(1);
         Room r2=MazeFactory.makeRoom(2);
+        r2=new ScaryRoomDecorator(r2);
         Room r3=MazeFactory.makeRoom(3);
+        r3=new AlienRoomDecorator(r3);// decorator class alien
+        AlienRoomDecorator r4=(AlienRoomDecorator)r3;
+        r4.addObjects("telusko");
+        
         Door thedoor=MazeFactory.makeDoor(r1,r2);
         Door thedoor2=MazeFactory.makeDoor(r2,r3);
         addRoom(r1);

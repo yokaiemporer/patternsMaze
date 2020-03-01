@@ -18,14 +18,28 @@ public class MazeGame
 
         for(Room room : mez.getRooms())
         {
-            System.out.println("rooms no"+room.getRoomNo());
+            System.out.print("rooms no"+room.getRoomNo()+ " properties:");
+            if(room instanceof RoomDecorator){
+            RoomDecorator roomM=(RoomDecorator)room;
+            for(String a:roomM.getContents())//usually u would get an error since there is
+            System.out.println(a);
+            }
+            else
+            System.out.println("ordinary room,no contents");
             
         }
         mez=createGame(cmp);
         
         for(Room room : mez.getRooms())
         {
-            System.out.println("rooms no"+room.getRoomNo());
+            System.out.print("rooms no"+room.getRoomNo()+ " properties:");
+            if(room instanceof RoomDecorator){
+            RoomDecorator roomM=(RoomDecorator)room;
+            for(String a:roomM.getContents())//usually u would get an error since there is
+            System.out.println(a);
+            }
+            else
+            System.out.println("ordinary room,no contents");
             
         }
 
